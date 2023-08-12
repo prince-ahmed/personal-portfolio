@@ -245,6 +245,11 @@ h6 {
   background-size: cover;
 }
 
+/* Add a class for transition effect */
+.crossfade-transition {
+  transition: background-image 1s ease-in-out;
+}
+
 #hero:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
@@ -848,6 +853,9 @@ section {
 }
 
 .contact .info {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Vertically center content */
   padding: 30px;
   background: #fff;
   width: 100%;

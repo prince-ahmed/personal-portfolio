@@ -259,4 +259,33 @@
    */
   new PureCounter();
 
+  const hero = document.getElementById('hero');
+  const images = [
+    "assets/img/hero-bg/hero-bg.jpg",
+    "assets/img/hero-bg/IMG_1741.jpeg",
+    "assets/img/hero-bg/IMG_9122.jpeg",
+    "assets/img/hero-bg/IMG_9558.jpeg"
+  ];
+  let currentImageIndex = 0;
+
+  function changeBackgroundImage() {
+    // Apply the transition class
+    hero.classList.add('crossfade-transition');
+  
+    // Change the background image and schedule the class removal
+    hero.style.backgroundImage = `url(${images[currentImageIndex]})`;
+    setTimeout(() => {
+      hero.classList.remove('crossfade-transition');
+    }, 1000); // Match the transition duration
+  
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+  }
+
+  // Initial background image setup
+  hero.style.backgroundImage = `url(${images[currentImageIndex]})`;
+
+  // Change background image every 5 seconds
+  setInterval(changeBackgroundImage, 5000);
+
+
 })()
