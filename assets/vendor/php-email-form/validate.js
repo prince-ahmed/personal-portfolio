@@ -57,8 +57,10 @@
     })
     .then(response => {
       if( response.ok ) {
+        console.log("hafhasifhaifha\n\n\n\n\n")
         return response.text();
       } else {
+        console.log(`${response.status} ${response.statusText} ${response.url}`)
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
     })
@@ -68,6 +70,8 @@
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
+        console.log("bbbbbbb\n\n\n\n\n")
+        console.log(data ? data : 'Form submission failed and no error message returned from: ' + action)
         throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
       }
     })
