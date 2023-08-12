@@ -66,6 +66,7 @@
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
+      console.log((data.includes('The form was submitted successfully')))
       if (data.trim() == 'OK' || (data.includes('The form was submitted successfully'))) {
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
