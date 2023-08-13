@@ -268,19 +268,28 @@
   ];
   let currentImageIndex = 0;
 
+
+  const imageElements = images.map(imageSrc => {
+    const img = new Image();
+    img.src = imageSrc;
+    return img;
+  });
+  
   function changeBackgroundImage() {
     // Apply the transition class
     hero.classList.add('crossfade-transition');
   
-    // Change the background image and schedule the class removal
+    // Change the background image after preloading
     hero.style.backgroundImage = `url(${images[currentImageIndex]})`;
+    
+    // Remove the transition class after a short delay
     setTimeout(() => {
       hero.classList.remove('crossfade-transition');
     }, 1000); // Match the transition duration
   
     currentImageIndex = (currentImageIndex + 1) % images.length;
   }
-
+  
   // Initial background image setup
   hero.style.backgroundImage = `url(${images[currentImageIndex]})`;
 
