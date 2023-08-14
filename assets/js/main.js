@@ -254,10 +254,6 @@
     })
   });
 
-  /**
-   * Initiate Pure Counter 
-   */
-  // new PureCounter();
 
   const hero = document.getElementById('hero');
   const images = [
@@ -268,28 +264,34 @@
   ];
   let currentImageIndex = 0;
 
-
   const imageElements = images.map(imageSrc => {
     const img = new Image();
     img.src = imageSrc;
+    img.addEventListener('load', () => {
+      img.loaded = true;
+    });
     return img;
   });
-  
+
   function changeBackgroundImage() {
-    // Apply the transition class
-    hero.classList.add('crossfade-transition');
-  
-    // Change the background image after preloading
-    hero.style.backgroundImage = `url(${images[currentImageIndex]})`;
+    const nextImageIndex = (currentImageIndex + 1) % images.length;
     
-    // Remove the transition class after a short delay
-    setTimeout(() => {
-      hero.classList.remove('crossfade-transition');
-    }, 1000); // Match the transition duration
-  
-    currentImageIndex = (currentImageIndex + 1) % images.length;
+    if (imageElements[nextImageIndex].loaded) {
+      // Apply the transition class
+      hero.classList.add('crossfade-transition');
+    
+      // Change the background image after preloading
+      hero.style.backgroundImage = `url(${images[nextImageIndex]})`;
+      
+      // Remove the transition class after a short delay
+      setTimeout(() => {
+        hero.classList.remove('crossfade-transition');
+      }, 1000); // Match the transition duration
+    
+      currentImageIndex = nextImageIndex;
+    }
   }
-  
+
   // Initial background image setup
   hero.style.backgroundImage = `url(${images[currentImageIndex]})`;
 
