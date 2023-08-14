@@ -540,6 +540,32 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+/* Style for the modified download button */
+.download-button-wrapper {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+.download-button {
+  display: inline-block;
+  background-color: transparent;
+  color: #1f5297;
+  border: 2px solid #1f5297;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add smooth transitions */
+}
+
+/* On hover, change the background color to light blue and the text to white */
+.download-button:hover {
+  background-color: #149ddd;
+  border: 2px solid #149ddd;
+  color: #fff;
+}
+
+
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
@@ -930,11 +956,12 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #149ddd;
+  color: #1f5297;
+  border: 2px solid #1f5297;
   float: left;
   width: 44px;
   height: 44px;
-  background: #dff3fc;
+  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -981,16 +1008,21 @@ section {
 }
 
 .contact .info .social-links a:hover {
-  background: #149ddd;
+  background: #1f5297;
   color: #fff;
 }
 
 .contact .info .email:hover i,
-.contact .info .address:hover i,
+.contact .info .linkedin:hover i,
+.contact .info .github:hover i,
 .contact .info .phone:hover i {
   background: #149ddd;
+  border: #149ddd;
   color: #fff;
 }
+
+
+
 
 .contact .php-email-form {
   width: 100%;
