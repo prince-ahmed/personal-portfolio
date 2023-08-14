@@ -395,12 +395,14 @@ section {
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
+
+
 .facts {
   padding-bottom: 30px;
 }
 
 .facts .count-box {
-  padding: 30px;
+  padding: 25px;
   width: 100%;
 }
 
@@ -409,7 +411,7 @@ section {
   font-size: 44px;
   color: #149ddd;
   float: left;
-  line-height: 0;
+  line-height: 1;
 }
 
 .facts .count-box span {
@@ -423,7 +425,7 @@ section {
 
 .facts .count-box p {
   padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
+  margin: 0 0 0 52px;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   color: #122f57;
@@ -441,6 +443,45 @@ section {
 
 .facts .count-box a:hover {
   color: #1f5297;
+}
+
+/* Add styles for the progress bar */
+.facts .progress {
+  margin: 0 0 0 50px;
+}
+
+.facts .progress .skill {
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  font-size: 32px;
+  position: relative; /* Add this */
+}
+
+.facts .progress .skill .val {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-style: normal;
+  font-size: 18px;
+  color: #050d18;
+}
+
+
+.facts .progress-bar-wrap {
+  background: #dce8f8;
+  height: 10px;
+}
+
+.facts .progress-bar {
+  width: 80%; /* Adjust this value to change the progress */
+  height: 10px;
+  transition: width 10s;
+  background-color: #149ddd;
 }
 
 /*--------------------------------------------------------------
