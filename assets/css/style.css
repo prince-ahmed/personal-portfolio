@@ -402,7 +402,7 @@ section {
 }
 
 .facts .count-box {
-  padding: 25px;
+  padding: 30px;
   width: 100%;
 }
 
@@ -483,6 +483,22 @@ section {
   transition: width 10s;
   background-color: #149ddd;
 }
+
+
+.language-icon {
+  font-size: 70px; /* Adjust the size as needed */
+  margin: 30px 30px; /* Adjust the margin for spacing */
+  color: #173b6c;
+  display: inline-block;
+}
+
+.language-icon-2 {
+  font-size: 100px; /* Adjust the size as needed */
+  margin: 30px 30px; /* Adjust the margin for spacing */
+  color: #173b6c;
+  display: inline-block;
+}
+
 
 /*--------------------------------------------------------------
 # Akills
