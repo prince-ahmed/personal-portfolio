@@ -257,10 +257,10 @@
 
   const hero = document.getElementById('hero');
   const images = [
-    "assets/img/hero-bg/hero-bg.jpg",
-    "assets/img/hero-bg/IMG_1741.jpeg",
-    "assets/img/hero-bg/IMG_9122.jpeg",
-    "assets/img/hero-bg/IMG_9558.jpeg"
+    "assets/img/hero-bg.jpeg",
+    "assets/img/IMG_1741.jpeg",
+    "assets/img/IMG_9122.jpeg",
+    "assets/img/IMG_9558.jpeg"
   ];
   let currentImageIndex = 0;
 
