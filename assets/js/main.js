@@ -196,6 +196,34 @@
     selector: '.portfolio-lightbox'
   });
 
+  
+  const lightbox = GLightbox({
+    elements: [
+      {
+        content: document.getElementById('inline-content-1').innerHTML,
+        type: 'inline'
+      },
+      {
+        content: document.getElementById('inline-content-2').innerHTML,
+        type: 'inline'
+      },
+      {
+        content: document.getElementById('inline-content-3').innerHTML,
+        type: 'inline'
+      }
+    ],
+    skin: 'clean' // Use the clean skin or adjust as needed
+  });
+
+  const inlineLinks = document.querySelectorAll('.portfolio-inline-link');
+  inlineLinks.forEach((link, index) => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      lightbox.openAt(index); // Open the lightbox at the corresponding index
+    });
+  });
+
+
   /**
    * Portfolio details slider
    */
