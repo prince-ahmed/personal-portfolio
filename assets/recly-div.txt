@@ -1,0 +1,16 @@
+          <div class="col-lg-4 col-md-6 portfolio-item filter-work-experience">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/recly.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="#inline-content-1" class="portfolio-inline-link" title="Inline Content"><i class="bx bx-plus"></i></a>
+                <a href="https://www.reclyapp.com/" title="Website"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Define your inline content -->
+          <div id="inline-content-1" class="portfolio-inline-content" style="display: none;">
+            <h2>Recly Internship Summer 2022</h2>
+            <p>This is your inline content for the Recly Internship Summer 2022 portfolio item.</p>
+            <p>You can add any HTML content you want here.</p>
+          </div>
